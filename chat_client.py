@@ -39,6 +39,7 @@ while True:
     msg = list(chat.get_history(limit=1))[0].content
     if msg != prev_msg:
         prev_msg = msg
+        print(msg)
         if msg.startswith("(From "):
             user = msg.split(":")[0][6:][:-1]
             msg = " ".join(msg.split(":")[1:]).strip().lower()
